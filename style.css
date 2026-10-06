@@ -96,197 +96,480 @@ footer{background:#171411;color:#bbb;padding:45px 6%;display:grid;grid-template-
   border-bottom:1px solid;
 }
 
+/* =========================================================
+   EXTRA SECTIONS — TEAM / CATERING / INSTAGRAM / FINAL CTA
+   Paste this at the VERY END of style.css
+========================================================= */
 
-/* TEAM */
-.team-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
+
+/* =========================================================
+   TEAM SECTION
+========================================================= */
+
+.team {
+  padding: 100px 0;
+  background: #f7f2ea;
 }
 
-.team-card{
-  text-align:center;
+.team .section-head {
+  margin-bottom: 45px;
 }
 
-.team-card img{
-  width:100%;
-  height:300px;
-  object-fit:cover;
-  margin-bottom:15px;
-  filter:saturate(.85);
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
-.team-card h3{
-  font-family:"Playfair Display";
-  font-size:21px;
+.team-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(70, 45, 30, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.team-card p{
-  color:var(--muted);
-  font-size:11px;
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(50, 35, 25, 0.14);
 }
 
-
-/* CATERING */
-.catering{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
+.team-card img {
+  width: 100%;
+  height: 330px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.catering-image{
-  height:500px;
+.team-card:hover img {
+  transform: scale(1.05);
 }
 
-.catering-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.team-info {
+  padding: 24px 22px 26px;
 }
 
-.catering-content p:not(.eyebrow){
-  color:var(--muted);
-  font-size:14px;
-  margin:22px 0;
+.team-info h3 {
+  margin: 0 0 6px;
+  color: #2b211b;
+  font-size: 21px;
+  font-weight: 700;
 }
 
-.catering-content ul{
-  list-style:none;
-  display:grid;
-  gap:12px;
-  margin-bottom:28px;
-  font-size:13px;
+.team-info span {
+  display: block;
+  margin-bottom: 13px;
+  color: #a35f3f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-
-/* INSTAGRAM */
-.instagram{
-  text-align:center;
-}
-
-.instagram .section-intro{
-  margin:15px auto 40px;
-}
-
-.instagram-grid{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:8px;
-}
-
-.instagram-grid img{
-  width:100%;
-  height:190px;
-  object-fit:cover;
-  transition:.4s;
-}
-
-.instagram-grid img:hover{
-  transform:scale(.97);
-  opacity:.85;
-}
-
-.instagram-btn{
-  display:inline-block;
-  margin-top:30px;
-  border-bottom:1px solid;
-  font-size:12px;
-  font-weight:bold;
-  padding-bottom:5px;
+.team-info p {
+  margin: 0;
+  color: #75685f;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 
-/* FINAL CTA */
-.final-cta{
-  background:var(--orange);
-  color:#fff;
-  padding:85px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:50px;
+/* =========================================================
+   CATERING SECTION
+========================================================= */
+
+.catering {
+  padding: 110px 0;
+  background: #fffaf4;
 }
 
-.final-cta .eyebrow{
-  color:#fff9;
+.catering-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
 }
 
-.final-cta h2{
-  font-size:52px;
+.catering-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  min-height: 560px;
 }
 
-.final-cta h2 em{
-  color:#fff;
+.catering-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
-.final-cta p:not(.eyebrow){
-  color:#fff;
-  opacity:.85;
-  margin-top:15px;
-  font-size:13px;
+.catering-image:hover img {
+  transform: scale(1.04);
 }
 
-.final-cta-buttons{
-  display:flex;
-  gap:12px;
-  flex-shrink:0;
+.catering-content {
+  max-width: 570px;
+}
+
+.catering-content h2 {
+  margin: 10px 0 22px;
+  color: #2b211b;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+
+.catering-content h2 em {
+  color: #a35f3f;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.catering-content > p {
+  margin-bottom: 30px;
+  color: #71665e;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.catering-list {
+  margin-bottom: 35px;
+  border-top: 1px solid rgba(70, 45, 30, 0.12);
+}
+
+.catering-list div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(70, 45, 30, 0.12);
+}
+
+.catering-list strong {
+  width: 32px;
+  color: #a35f3f;
+  font-size: 13px;
+}
+
+.catering-list span {
+  color: #33271f;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 
-/* RESPONSIVE */
-@media(max-width:900px){
+/* =========================================================
+   INSTAGRAM / PHOTO GRID
+========================================================= */
 
-  .offers-grid{
-    grid-template-columns:1fr 1fr;
+.instagram {
+  padding: 100px 0;
+  background: #211b17;
+}
+
+.instagram .section-head {
+  margin-bottom: 40px;
+}
+
+.instagram .eyebrow {
+  color: #c99870;
+}
+
+.instagram h2 {
+  color: #fffaf4;
+}
+
+.instagram h2 em {
+  color: #d6a77d;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.instagram-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.text-link {
+  color: #d8b08c;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(216, 176, 140, 0.5);
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.text-link:hover {
+  color: #ffffff;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.instagram-item {
+  display: block;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #302720;
+}
+
+.instagram-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.55s ease, opacity 0.35s ease;
+}
+
+.instagram-item:hover img {
+  transform: scale(1.08);
+  opacity: 0.78;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+  position: relative;
+  padding: 120px 20px;
+  background:
+    linear-gradient(
+      rgba(42, 29, 22, 0.86),
+      rgba(42, 29, 22, 0.92)
+    ),
+    url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85")
+    center / cover no-repeat;
+  text-align: center;
+}
+
+.final-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta .eyebrow {
+  color: #d5a77d;
+}
+
+.final-cta h2 {
+  margin: 12px 0 20px;
+  color: #fffaf4;
+  font-size: clamp(45px, 7vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+}
+
+.final-cta h2 em {
+  color: #d8aa7e;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.final-cta-content > p:not(.eyebrow) {
+  max-width: 570px;
+  margin: 0 auto 35px;
+  color: rgba(255, 250, 244, 0.78);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.final-cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+
+/* =========================================================
+   BUTTONS FOR FINAL CTA
+========================================================= */
+
+.btn-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 25px;
+  border-radius: 999px;
+  background: #fffaf4;
+  color: #2b211b;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background: #d6a77d;
+  color: #211b17;
+  transform: translateY(-3px);
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 25px;
+  border: 1px solid rgba(255, 250, 244, 0.7);
+  border-radius: 999px;
+  color: #fffaf4;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: #fffaf4;
+  color: #2b211b;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .team-grid{
-    grid-template-columns:1fr 1fr;
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .catering{
-    gap:35px;
+  .instagram-item {
+    height: 250px;
   }
 
-  .instagram-grid{
-    grid-template-columns:repeat(3,1fr);
+  .catering-grid {
+    gap: 45px;
   }
 
-  .final-cta{
-    display:block;
-  }
-
-  .final-cta-buttons{
-    margin-top:30px;
-  }
 }
 
-@media(max-width:600px){
 
-  .offers-grid,
-  .team-grid,
-  .catering{
-    grid-template-columns:1fr;
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .team {
+    padding: 75px 0;
   }
 
-  .catering-image{
-    height:400px;
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .instagram-grid{
-    grid-template-columns:repeat(2,1fr);
+  .team-card img {
+    height: 360px;
   }
 
-  .instagram-grid img{
-    height:180px;
+
+  .catering {
+    padding: 75px 0;
   }
 
-  .final-cta h2{
-    font-size:40px;
+  .catering-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .final-cta-buttons{
-    flex-wrap:wrap;
+  .catering-image,
+  .catering-image img {
+    min-height: 400px;
   }
+
+  .catering-content h2 {
+    font-size: 48px;
+  }
+
+
+  .instagram {
+    padding: 75px 0;
+  }
+
+  .instagram-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .instagram-item {
+    height: 210px;
+  }
+
+
+  .final-cta {
+    padding: 90px 20px;
+  }
+
+  .final-cta h2 {
+    font-size: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .team-card img {
+    height: 320px;
+  }
+
+  .catering-content h2 {
+    font-size: 42px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .instagram-item {
+    height: 170px;
+  }
+
+  .final-cta h2 {
+    font-size: 42px;
+  }
+
+  .final-cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-light,
+  .btn-outline-light {
+    width: 100%;
+    max-width: 280px;
+  }
+
 }
